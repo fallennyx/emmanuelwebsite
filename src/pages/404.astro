@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="404 — Emmanuel Akanmu" description="Page not found." dim={true}>
+  <article class="wrap page">
+    <p class="eyebrow">404</p>
+    <h1>Lost in the cosmos</h1>
+    <div class="prose">
+      <p>
+        This page drifted out of orbit — or never existed. Let's get you back to
+        something real.
+      </p>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/archive">Archive</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .page { padding-top: 3rem; }
+  .page h1 { font-size: clamp(34px, 7vw, 52px); color: #fff; margin: 14px 0 2rem; }
+</style>

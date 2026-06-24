@@ -1,0 +1,44 @@
+---
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href);
+---
+
+<header class="nav">
+  <a href="/" class="wordmark">EMMANUEL AKANMU</a>
+  <nav>
+    <a href="/about" class:list={[{ active: isActive('/about') }]}>about</a>
+    <a href="/archive" class:list={[{ active: isActive('/archive') }]}>archive</a>
+  </nav>
+</header>
+
+<style>
+  .nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 28px;
+  }
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  .nav nav { display: flex; gap: 26px; }
+  .nav nav a {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  .nav nav a:hover, .nav nav a.active { color: #fff; }
+  @media (max-width: 520px) {
+    .nav { flex-direction: column; gap: 14px; padding: 18px; }
+  }
+</style>

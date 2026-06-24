@@ -1,0 +1,91 @@
+---
+import Base from '../layouts/Base.astro';
+
+const portals = [
+  { href: '/about', label: 'about', sub: 'who i am', color: 'var(--violet)' },
+  { href: '/archive', label: 'archive', sub: 'writing, projects & research', color: 'var(--magenta)' },
+];
+---
+
+<Base>
+  <section class="hero">
+    <h1>EMMANUEL<br />AKANMU</h1>
+    <p class="tag">
+      Writer, builder, and collector of artifacts — assembling everything I make, out in the open.
+    </p>
+    <div class="entries">
+      {portals.map((p) => (
+        <a class="portal" href={p.href}>
+          <span class="orb" style={`--c:${p.color}`}></span>
+          <span class="label">{p.label}</span>
+          <span class="sub">{p.sub}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    min-height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 11vw, 90px);
+    color: #fff;
+    margin: 0;
+    letter-spacing: 4px;
+  }
+  .hero .tag {
+    max-width: 420px;
+    margin: 24px auto 0;
+    color: var(--text);
+    font-size: 16px;
+  }
+  .entries {
+    display: flex;
+    gap: 44px;
+    margin-top: 52px;
+  }
+  .portal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px 28px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  }
+  .portal:hover {
+    transform: translateY(-6px);
+    border-color: var(--border);
+    background: var(--card);
+  }
+  .orb {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    background: radial-gradient(circle at 35% 30%, var(--c), color-mix(in srgb, var(--c) 30%, #0a0816) 72%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+  .portal:hover .orb {
+    transform: scale(1.06);
+    box-shadow: 0 0 38px -6px var(--c);
+  }
+  .label { font-family: var(--font-display); font-size: 18px; color: #fff; }
+  .sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  @media (max-width: 560px) {
+    .entries { flex-direction: column; gap: 18px; }
+    .portal { flex-direction: row; gap: 16px; text-align: left; padding: 14px 18px; }
+    .orb { width: 52px; height: 52px; margin-bottom: 0; }
+  }
+</style>

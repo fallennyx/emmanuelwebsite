@@ -1,0 +1,81 @@
+---
+interface Props {
+  title: string;
+  date: Date;
+  summary?: string;
+  category: 'writing' | 'project' | 'research';
+  status: 'shipped' | 'building' | 'archived';
+  repo?: string;
+  file?: string;
+  tags: string[];
+  slug: string;
+}
+
+const { title, date, summary, category, status, repo, file, tags, slug } = Astro.props;
+
+const external = Boolean(repo);
+const href = repo ?? file ?? `/archive/${slug}`;
+const cta = repo ? 'View on GitHub' : file ? 'Open document' : 'Read';
+const icon = repo ? '↗' : '↦';
+const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+---
+
+<a
+  class="card"
+  data-category={category}
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+>
+  <div class="top">
+    <span class={`cat ${category}`}>{category}</span>
+    {category !== 'research' && <span class={`badge ${status}`}>{status}</span>}
+  </div>
+  <h3>{title}</h3>
+  {summary && <p class="summary">{summary}</p>}
+  <div class="meta">
+    <span>{dateStr}</span>
+    {tags.length > 0 && <span class="tags">{tags.join(' · ')}</span>}
+  </div>
+  <span class="cta">{cta} <span class="ic">{icon}</span></span>
+</a>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    backdrop-filter: blur(6px);
+  }
+  .card:hover {
+    border-color: var(--border-strong);
+    background: var(--card-hover);
+    transform: translateY(-3px);
+  }
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .cat {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .cat.writing { color: #5fd3ad; }
+  .cat.project { color: #a99ff0; }
+  .cat.research { color: #ec8fb4; }
+  .card h3 { font-size: 19px; color: #fff; }
+  .summary { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .meta {
+    display: flex;
+    gap: 14px;
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.5px;
+  }
+  .cta { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .cta .ic { display: inline-block; transition: transform 0.2s; }
+  .card:hover .cta .ic { transform: translate(2px, -2px); }
+</style>

@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('archive');
+  // Detail pages only for entries with a written body — projects (repo) and
+  // uploaded documents (file) link out instead.
+  return entries
+    .filter((e) => !e.data.repo && !e.data.file)
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const dateStr = entry.data.date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Base title={`${entry.data.title} — Emmanuel Akanmu`} description={entry.data.summary} dim="strong">
+  <article class="wrap post">
+    <a class="back" href="/archive">← archive</a>
+    <p class={`cat ${entry.data.category}`}>{entry.data.category}</p>
+    <h1>{entry.data.title}</h1>
+    <p class="date">{dateStr}</p>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .post { padding-top: 2rem; }
+  .back { font-size: 13px; color: var(--muted); }
+  .back:hover { color: #fff; }
+  .cat {
+    margin-top: 1.6rem;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .cat.writing { color: #5fd3ad; }
+  .cat.project { color: #a99ff0; }
+  .cat.research { color: #ec8fb4; }
+  .post h1 { font-size: clamp(30px, 6vw, 44px); color: #fff; margin: 0.5rem 0 0.4rem; }
+  .date { font-size: 13px; color: var(--faint); margin-bottom: 2.4rem; letter-spacing: 0.5px; }
+</style>
