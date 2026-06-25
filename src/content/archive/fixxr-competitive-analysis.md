@@ -1,7 +1,7 @@
 ---
 title: "Fixxr Competitive Teardown: AI Car Repair in a Startup Graveyard"
-date: 2026-06-20
-summary: "Investor-grade competitive analysis of a pre-seed AI diagnostic app entering a category where YourMechanic, Wrench, and RepairSmith all failed — and what the differentiated wedge actually is."
+date: 2026-06-25
+summary: "A venture-grade competitive teardown of Fixxr, an AI car-repair startup I was weighing joining. The due diligence I'd want before betting my time on a team: where the category's graveyard is, what the real differentiated wedge is, and whether the traction holds up."
 category: research
 status: shipped
 tags: ["venture", "competitive analysis", "AI", "automotive"]

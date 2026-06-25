@@ -17,7 +17,7 @@ const external = Boolean(repo);
 const href = repo ?? file ?? `/archive/${slug}`;
 const cta = repo ? 'View on GitHub' : file ? 'Open document' : 'Read';
 const icon = repo ? '↗' : '↦';
-const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+const dateStr = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
 ---
 
 <a

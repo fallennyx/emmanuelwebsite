@@ -1,7 +1,7 @@
 ---
 title: "MCP-to-Open-RMF: The Robotics Infrastructure Gap"
-date: 2026-04-15
-summary: "Deep analysis of the whitespace in AI-orchestrated robot fleet management — why no one has shipped an MCP bridge to Open-RMF yet, and what the installed base actually supports."
+date: 2026-04-25
+summary: "The original research on the robotics-fleet problem: bridging MCP to Open-RMF so an AI agent could orchestrate a heterogeneous robot fleet. An honest read on the whitespace — and why the timing matters more than the opportunity."
 category: research
 status: shipped
 tags: ["AI", "robotics", "MCP", "infrastructure"]

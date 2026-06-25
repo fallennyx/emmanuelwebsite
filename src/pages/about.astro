@@ -31,9 +31,17 @@ import Base from '../layouts/Base.astro';
         to build systems that matter and a life I designed on purpose.
       </p>
 
+      <p class="resume-cta">
+        <a class="resume-link" href="/emmanuel-akanmu-resume.pdf" target="_blank" rel="noopener">
+          View résumé (PDF) →
+        </a>
+      </p>
+
       <h2>Elsewhere</h2>
       <ul>
         <li><a href="https://github.com/fallennyx">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/emmanuelakanmu/">LinkedIn</a></li>
+        <li><a href="/emmanuel-akanmu-resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
         <li><a href="mailto:1eakanmu@gmail.com">Email</a></li>
       </ul>
     </div>
@@ -43,4 +51,19 @@ import Base from '../layouts/Base.astro';
 <style>
   .page { padding-top: 3rem; }
   .page h1 { font-size: clamp(34px, 7vw, 52px); color: #fff; margin: 14px 0 2rem; }
+  .resume-cta { margin: 1.75rem 0 0; }
+  .resume-link {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .resume-link:hover {
+    background: var(--accent);
+    color: #000;
+  }
 </style>

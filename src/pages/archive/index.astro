@@ -19,7 +19,12 @@ const filters = [
   <section class="wrap page">
     <p class="eyebrow">archive</p>
     <h1>Everything I make</h1>
-    <p class="lede">Writing, projects, and research — collected in one place. Filter to narrow it down.</p>
+    <p class="lede">
+      This is where I keep the thinking I've done in public — research teardowns, things
+      I'm building, and writing. Most of it started as me trying to understand a system
+      well enough to act on it, then deciding the reasoning was worth keeping. Browse it
+      all, or filter down to what you came for.
+    </p>
 
     <div class="filter">
       {filters.map((f) => (
@@ -54,7 +59,7 @@ const filters = [
       let shown = 0;
       cards.forEach((card) => {
         const match = f === 'all' || card.dataset.category === f;
-        card.hidden = !match;
+        card.style.display = match ? '' : 'none';
         if (match) shown += 1;
       });
       if (empty) empty.hidden = shown > 0;
@@ -65,7 +70,7 @@ const filters = [
 <style>
   .page { padding-top: 3rem; max-width: 980px; }
   .page h1 { font-size: clamp(34px, 7vw, 52px); color: #fff; margin: 14px 0 0.8rem; }
-  .lede { color: var(--muted); max-width: 520px; margin-bottom: 2rem; }
+  .lede { color: var(--muted); max-width: 620px; line-height: 1.6; margin-bottom: 2rem; }
 
   .filter {
     display: flex;

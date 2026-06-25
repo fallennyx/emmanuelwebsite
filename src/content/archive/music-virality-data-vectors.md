@@ -1,7 +1,7 @@
 ---
 title: "Every Data Vector for Predicting Music Virality"
-date: 2026-02-10
-summary: "A full map of eight signal layers — acoustic embeddings, TikTok behavioral data, lyric semantics, neurophysiology — and why no commercial tool actually listens to music yet."
+date: 2026-03-25
+summary: "Investigating whether music virality has an objective, mathematical basis — cataloguing every data vector that might predict whether a track breaks out, and how much real signal each one carries."
 category: research
 status: shipped
 tags: ["ML", "music", "data science", "product"]

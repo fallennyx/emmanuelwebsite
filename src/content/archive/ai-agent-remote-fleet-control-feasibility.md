@@ -1,13 +1,12 @@
 ---
-title: "Feasibility: An AI Agent for Remote Crypto-Mining Fleet Control"
-date: 2026-03-10
-summary: "Technically feasible today via pyasic's unified API — the market gap isn't another dashboard, it's autonomous closed-loop remediation. Here's the architecture and the wedge."
+title: "Feasibility: An AI Agent for Remote Fleet Control Without a Unified API"
+date: 2026-06-04
+summary: "Early thinking on future robotics and an AI fleet controller: could an autonomous agent run a heterogeneous hardware fleet with no unified API? The feasibility study that seeded the idea of an autonomous remote AI agent."
 category: research
 status: shipped
-tags: ["AI agents", "crypto", "infrastructure", "market analysis"]
+tags: ["AI agents", "systems engineering", "protocols", "feasibility"]
 ---
 
-# Feasibility Assessment: An AI Agent for Remote Crypto-Mining Fleet Control Without a Unified API
 
 **TL;DR**
 - **Technically feasible today.** The cgminer-derived API on TCP port 4028 is a near-universal read interface across Antminer, Whatsminer, and Avalon, and the open-source Python library `pyasic` already abstracts the messy per-vendor control differences — so an AI agent does not need browser automation as its primary path and does not need vendor cooperation.

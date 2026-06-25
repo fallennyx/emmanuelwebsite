@@ -1,7 +1,7 @@
 ---
 title: "Venture Assessment: AI for Regulated-Document Compliance"
-date: 2026-03-15
-summary: "FDD drafting vs. defense CUI documents — mapping the whitespace, the incumbents, the unauthorized-practice-of-law risk, and which wedge to lead with."
+date: 2026-06-11
+summary: "A venture assessment of AI for regulated- and government-document compliance, weighing two wedges — franchise disclosure documents (FDD) versus defense — on market, technical, and regulatory fit."
 category: research
 status: shipped
 tags: ["venture", "AI", "legaltech", "defense"]

@@ -1,7 +1,7 @@
 ---
 title: "Reverse Samwer Screen: 16 Foreign-Proven App Opportunities With US Whitespace"
-date: 2026-03-01
-summary: "The single strongest play is a live pay-per-minute spiritual advisor marketplace modeled on India's $78M Astrotalk — and why tools beat networks for every other pick on this list."
+date: 2026-06-19
+summary: "A structural-arbitrage screen for apps already proven successful in foreign markets that still have no real US implementation — sixteen foreign-proven opportunities with open US whitespace, and what makes each one transplantable."
 category: research
 status: shipped
 tags: ["apps", "international", "market research", "product"]

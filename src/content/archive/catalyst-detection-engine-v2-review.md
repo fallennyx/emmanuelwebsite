@@ -1,13 +1,14 @@
 ---
 title: "Catalyst Detection Engine v2: Peer Review & Architecture Spec"
-date: 2026-04-05
-summary: "What v1 leaves on the table — replacing equal-weight rules with a LightGBM meta-label gate, why CryptoBERT lifts precision 6pp over keyword RSS, and five free-tier data assumptions that died in 2026."
+date: 2026-05-25
+summary: "An adversarial peer review of my own detection architecture, measured directly against v1: what the first version left on the table, the assumptions the empirical record contradicts, and the v2 spec that fixes them."
 category: research
 status: shipped
+draft: true
 tags: ["trading", "ML", "systems architecture", "crypto"]
 ---
 
-# Catalyst Detection Engine v2 — Peer Review & Spec
+> ↩ Part of the [**Catalyst Radar**](/archive/catalyst-radar-engine) project — see the shipped engine and the v1 optimization brief that preceded this review.
 
 The v1 stack is structurally sound but **leaves 30–60% of available IR on the table** and contains three load-bearing assumptions that the empirical record contradicts. The single highest-ROI architectural change is replacing equal-weight AND/OR rules with a **LightGBM meta-label gate trained on triple-barrier labels**, which lifts precision 5–10pp in published reproductions on both ES futures (Hudson & Thames 0.48→0.54) and BTC (Quang Khải reproduction 0.63 precision, 0.73 recall). The single highest-ROI signal addition is **CryptoBERT news classification** for Pipeline B (~6pp accuracy lift over keyword RSS). **Nitter is dead, X scraping is broken, DefiLlama unlocks API is paywalled, Coinglass liquidation heatmaps are paywalled, CryptoQuant has no free API, and DefiLlama has no per-token CEX flow endpoint** — five free-tier assumptions in v1 that no longer hold in 2026. Realistic precision/recall floors on free data: **55–65% precision and 30–45% recall** at the v1 horizons; the v1 target of ≥65% precision is achievable only on T1 majors with macro-event triggers and on T2 listing/ETF events, not as a universe-wide floor.
 
