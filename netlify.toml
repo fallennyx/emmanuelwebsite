@@ -5,6 +5,15 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# FDD Update Engine demo — serverless proxy that holds the OpenRouter key.
+# The function is bundled from netlify/functions and routes at /api/diff-item
+# (via `export const config = { path }`). It imports alloy_sample.json, so esbuild
+# is required to inline the JSON into the bundle.
+# Secret OPENROUTER_API_KEY must be set in the Netlify UI (Site config → env vars).
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Security + performance headers (ported from the AkanmuTech site).
 # X-XSS-Protection intentionally omitted — it's deprecated and modern guidance
 # is to leave it off rather than set "1; mode=block".
