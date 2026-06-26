@@ -1,7 +1,7 @@
 ---
 title: "Personal Distillation Pipeline: Voice & Notes → Second Brain"
 date: 2026-06-25
-summary: "Two personal builds that distill a longitudinal model of my own mind from my own data — what I believe, how I think, which ideas recur, and how my thinking has changed over time. A voice-memo pipeline and a notes pipeline, both running on Claude. The personal precursors to the Living Cognitive Distillation Engine idea."
+summary: "Two builds, one job: take a pile of my own raw output, voice memos and 700-plus notes, and distill a model of my own mind. What I believe, how I think, which ideas keep coming back, how the thinking has changed over time. Both are MAP→REDUCE pipelines on Claude, built to run on my own data. These are the laptop-grade precursors. The productized version is the Living Cognitive Distillation Engine."
 category: project
 status: shipped
 tags: ["Python", "Claude API", "RAG", "personal tooling"]

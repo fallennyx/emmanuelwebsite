@@ -1,7 +1,7 @@
 ---
 title: "OVERPOWER: A Browser Open-World Sandbox"
 date: 2026-06-11
-summary: "A browser-based open-world superhero sandbox — procedural city, switchable powers, crowd NPCs, destructible buildings, all generated in code with no external assets. One-shotted with Claude's Fable model — an experiment in how far a single prompt can take a full open-world game."
+summary: "A browser open-world superhero sandbox: procedural city, switchable powers, crowd NPCs, buildings you can level. No external assets, all of it generated in code. And it was one-shotted, a single prompt to Claude's Fable model. The experiment was simple: how far can one prompt take a whole open-world game? This far."
 category: project
 status: shipped
 repo: "https://github.com/fallennyx/Jiggyworld"

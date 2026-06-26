@@ -117,6 +117,14 @@ async function callModel(key, item, title, prior, neu) {
       });
       if (!resp.ok) {
         lastErr = `HTTP ${resp.status}`;
+        if ([401, 403].includes(resp.status)) {
+          // Key present but rejected (invalid / disabled / no credits). Retrying
+          // can't fix a bad key — tag it terminal so the handler surfaces "API key
+          // invalid" instead of the generic transient-provider soft-fail.
+          const e = new Error(`OpenRouter auth ${resp.status}: ${(await resp.text()).slice(0, 200)}`);
+          e.authError = true;
+          throw e;
+        }
         if ([429, 500, 502, 503].includes(resp.status)) {
           await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
           continue;
@@ -144,6 +152,7 @@ async function callModel(key, item, title, prior, neu) {
       }
       return { changes: parsed.changes || [], usage };
     } catch (e) {
+      if (e.authError) throw e; // terminal — never burn retries on a bad key
       lastErr = e.name === "AbortError" ? `timeout after ${CALL_TIMEOUT_MS}ms` : e.message;
     } finally {
       clearTimeout(timer);
@@ -199,6 +208,19 @@ export default async (req) => {
       ms: Date.now() - t0,
     });
   } catch (e) {
+    if (e.authError) {
+      // Key was present but rejected — surface it plainly so a bad/empty key is not
+      // mistaken for a transient provider outage (which the soft-fail implies).
+      return Response.json({
+        ...base,
+        llm: true,
+        changes: [],
+        discarded: 0,
+        auth_error:
+          "OpenRouter rejected the API key (HTTP 401/403) — it is invalid, disabled, or out of credits. Set/replace OPENROUTER_API_KEY in the Netlify site env.",
+        ms: Date.now() - t0,
+      });
+    }
     // Soft-fail: a flaky provider error on one item must not break the run. Return
     // 200 with no changes + a visible note; the browser also retries with a fresh call.
     return Response.json({

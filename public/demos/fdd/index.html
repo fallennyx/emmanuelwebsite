@@ -106,6 +106,14 @@
       cannot invent a fee or a date. Items <strong>9, 17, 20, 23</strong> bypass the model entirely — they are
       computed (Item 20's outlet counts are pure arithmetic on the roster).
     </p>
+    <p class="mb-2">
+      <strong class="text-slate-500">Note on Item 19:</strong> Financial Performance Representations is the
+      largest section in the filing, and its live diff can exceed this demo's serverless time budget (each call
+      stays under Netlify's 10-second sync limit). If Item 19 shows <em>“provider — rerun,”</em> that's the timeout,
+      not a data problem — rerun it, or read it in the source filing. Recovering it reliably would require the
+      26-second function tier, which this demo intentionally does not use. Item 19 is flagged for attorney review
+      regardless.
+    </p>
     <p>
       Items 3, 4, 17, 19, 21, 22, 23 always require licensed-attorney review per NASAA Universal Rule 7. This demo
       is for evaluation only — not a substitute for counsel.
@@ -179,15 +187,15 @@ function appendFeed(d){
   const feed = document.getElementById('feed');
   const hasChanges = (d.changes||[]).length>0;
   const flagged = d.always_review || (hasChanges && ALWAYS_REVIEW.has(d.item));
-  if(!hasChanges && !d.note && !d.soft_error && !flagged) return; // skip empty non-flagged items
+  if(!hasChanges && !d.note && !d.soft_error && !d.auth_error && !flagged) return; // skip empty non-flagged items
   const card = document.createElement('div');
   card.className = 'bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden';
   const banner = flagged
     ? `<div class="bg-red-50 border-b border-red-100 px-4 py-1.5 text-[11px] font-semibold text-red-700">⚠ Attorney review required — NASAA Universal Rule 7</div>` : '';
   const detTag = d.deterministic ? '<span class="text-[10px] bg-violet-100 text-violet-700 rounded px-1.5 py-0.5 font-semibold ml-2">DETERMINISTIC · no LLM</span>' : '';
   const meta = d.llm && d.tokens ? `<span class="text-[10px] text-slate-300 ml-auto font-mono">${d.tokens.in}→${d.tokens.out} tok · ${d.ms}ms</span>` : '';
-  const noteText = d.soft_error || d.note;
-  const note = noteText ? `<p class="text-xs ${d.soft_error?'text-red-500':'text-slate-500'} px-4 pb-3">${esc(noteText)}</p>` : '';
+  const noteText = d.auth_error || d.soft_error || d.note;
+  const note = noteText ? `<p class="text-xs ${(d.soft_error||d.auth_error)?'text-red-500':'text-slate-500'} px-4 pb-3">${esc(noteText)}</p>` : '';
   const body = hasChanges ? `<div class="px-4 py-3 space-y-1">${d.changes.map(renderChange).join('')}</div>` : '';
   card.innerHTML = `${banner}
     <div class="flex items-center px-4 pt-3 pb-1">
@@ -205,7 +213,8 @@ async function fetchItem(n, attempts=3){
     try{
       const r = await fetch(`/api/diff-item?item=${n}`);
       const d = await r.json();
-      if(d.soft_error){ softResult = d; lastErr = d.soft_error; }      // retry a fresh call
+      if(d.auth_error){ return d; }                                    // bad key — retrying can't fix it
+      else if(d.soft_error){ softResult = d; lastErr = d.soft_error; } // retry a fresh call
       else if(d.error && !(d.changes && d.changes.length)) { lastErr = d.error; }
       else return d;
     }catch(e){ lastErr = e.message; }
@@ -219,6 +228,9 @@ async function runItem(n){
   setCard(n, 'diffing', DETERMINISTIC.has(n)?'computing…':'diffing…');
   try{
     const d = await fetchItem(n);
+    if(d.auth_error){
+      stats.done++; setCard(n,'error','API key invalid'); appendFeed(d); updateStats(); return;
+    }
     if(d.soft_error){
       stats.done++; if(d.always_review) stats.review++;
       setCard(n,'error','provider — rerun'); appendFeed(d); updateStats(); return;

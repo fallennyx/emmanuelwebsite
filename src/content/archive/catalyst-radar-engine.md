@@ -1,7 +1,7 @@
 ---
 title: "Catalyst Radar: Real-Time Market-Event Detection Engine"
 date: 2026-06-16
-summary: "The whole Catalyst Radar project in one place — an attempt to predict and automate trading calls end-to-end. The shipped engine, the research and specs that led to it, and the honest quant backtest that showed the edge wasn't there past the first hour, which is why I don't trade it manually."
+summary: "The whole Catalyst Radar project in one place: a Python engine that scans 163 perpetual markets every five minutes, ranks the unusual movers, classifies each catalyst with Claude, and fires a deterministic alert. Then I backtested 482 of its live alerts and the honest answer came back: the edge dies after the first hour. So I don't trade it by hand. The engine ships, the research ships, and the backtest that killed the trade thesis ships too. The thinking is the artifact."
 category: project
 status: shipped
 tags: ["Python", "asyncio", "Claude API", "event detection"]

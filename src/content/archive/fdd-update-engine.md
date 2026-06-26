@@ -1,22 +1,22 @@
 ---
 title: "FDD Update Engine: AI + Deterministic Drafting for Franchise Disclosure Documents"
 date: 2026-06-25
-summary: "I went looking for an industry where AI document synthesis wasn't tapped yet — franchise disclosure documents were the first wedge. Building the demo made me pivot the whole idea: not a 23-prompt text generator, but a side-by-side updater that diffs last year's FDD against this year's source docs the way an attorney actually works."
+summary: "Found a document nobody automates: the franchise disclosure document every franchisor has to refile every year, by hand, by lawyers. I built a demo to test it, and building it changed the whole idea. Attorneys don't draft 23 items from a blank page. They put last year's filing next to this year's and fix what moved. So that's the product now: upload the old FDD, drop in the new inputs, get a tracked-changes diff a lawyer can finalize. The actual workflow, not a text generator."
 category: project
 status: building
 tags: ["Python", "FastAPI", "Claude API", "legaltech", "DOCX"]
 ---
 
-I was hunting for an untapped industry — somewhere LLM document synthesis and analysis
+I was hunting for an untapped opportunity where LLM document synthesis and analysis
 could do real work that nobody had automated yet. **Franchise Disclosure Documents (FDDs)
-were the first wedge I found.** Every U.S. franchisor — roughly 9,000 brands — has to
+was the biggest wedge I found.** Every U.S. franchisor — roughly 9,000 brands — has to
 update its 23-item FDD every year, it's done by hand by attorneys at $4,000–$15,000 a
 filing, and no one is automating the *franchisor* side. I also have a government angle to
-lean on — I'm in the military — which matters for the larger adjacent wedge (defense / CUI
+lean on (Secret Clearance through ANG), which matters for the larger adjacent wedge (defense / CUI
 compliance documents). The full market reasoning lives in the
 [venture assessment](/archive/ai-regulated-document-compliance-venture).
 
-So I built a demo to figure it out — and building it changed the idea.
+And So I built a demo to figure it out, and while building it changed the idea.
 
 **The original plan** was 23 extraction prompts: read each item out of the prior FDD and
 re-generate the text from scratch. **What I realized** is that's not how the work actually
@@ -33,8 +33,15 @@ routed per item.
 
 ## See it
 
-- [**▶ Try the demo →**](/demos/fdd/index.html) — a real public Westin FDD, updated to a
-  tracked-changes DOCX in the browser, no API key needed.
+- [**▶ Try the live demo →**](/demos/fdd/index.html) — it diffs two **real** consecutive
+  filings: **Alloy Personal Training's 2025 FDD against its 2026 FDD** (both public, from
+  the Minnesota CARDS registry). Hit run and the engine walks all 23 items live, surfacing
+  every change an attorney must make  *each one quoted verbatim from the actual filing*.
+  Because the 2026 FDD is the answer key, you can check the engine against what the
+  franchisor's lawyers really filed: it catches the outlet count jumping **78 → 129
+  (+51)**, fee changes, and the advisory-council that formed mid-year. The narrative items
+  run on Gemini 2.5 Flash-Lite behind a verbatim-substring gate that *cannot* invent a
+  value; items 9/17/20/23 are computed in pure Python with no model at all.
 - [**The venture assessment behind it →**](/archive/ai-regulated-document-compliance-venture)
   — the market, the incumbents, the unauthorized-practice-of-law risk, and why I led with FDD.
 - [**Code on GitHub →**](https://github.com/fallennyx/fddpipeline)
