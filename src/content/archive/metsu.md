@@ -13,7 +13,7 @@ your reasoning style, how you decide, and how you make sense of your own life. G
 validated psychology, cited to your own words. It ports into any AI to make it yours, and
 you can read it to understand yourself.
 
-*The name: Metsu (滅) is a Buddhist word for cessation, the end of suffering.*
+*Metsu (滅): a Buddhist word for cessation, the end of suffering. Also a backronym, Meaning Extraction Thought Synthesis Unit.*
 
 ## What it is, plainly
 
@@ -48,10 +48,15 @@ This is the trust story, and it's non-negotiable.
 - **No pseudoscience.** No personality types, no diagnoses, no population comparisons. Metsu
   openly shows what it refuses to infer, and why.
 - **Built on peer-reviewed psycholinguistics**, not vibes.
+- **Local-first.** Your corpus and your model are yours. Nothing personal is committed or
+  phoned home. This is the leg the incumbents structurally can't copy, because their
+  business is centralized data.
 
 ## Where it is right now
 
-In active development. I won't overclaim, so here is the honest state.
+In active development. The repo is private during the build; the code opens at launch,
+alongside the synthesis layer and the proof harness. I won't overclaim, so here is the
+honest state.
 
 **Built and tested:** the cognitive-science grounding research, a live competitive-landscape
 scan, an evidence-graded catalog of which cognitive facets are validly extractable, the core
