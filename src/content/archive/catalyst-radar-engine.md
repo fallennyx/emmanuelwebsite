@@ -1,6 +1,6 @@
 ---
 title: "Catalyst Radar: Real-Time Market-Event Detection Engine"
-date: 2026-06-16
+date: 2026-06-26
 summary: "The whole Catalyst Radar project in one place: a Python engine that scans 163 perpetual markets every five minutes, ranks the unusual movers, classifies each catalyst with Claude, and fires a deterministic alert. Then I backtested 482 of its live alerts and the honest answer came back: the edge dies after the first hour. So I don't trade it by hand. The engine ships, the research ships, and the backtest that killed the trade thesis ships too. The thinking is the artifact."
 category: project
 status: shipped

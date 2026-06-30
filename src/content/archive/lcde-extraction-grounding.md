@@ -1,5 +1,5 @@
 ---
-title: "The Living Cognitive Distillation Engine: Cognitive-Science Grounding"
+title: "Metsu: Cognitive-Science Grounding"
 date: 2026-06-26
 summary: "I'm building this engine on the side, and to build it right I need to understand the human brain — how we communicate, how we talk, how to pull what's actually in someone's head out as cleanly as possible. Smarter people in psycholinguistics, psychology, and neuroscience have already done the hard part. So I went and did the research and pulled what they proved straight into the engine. This is what it produced: what you can read from a person's words, what you can't, and what the engine should refuse to guess."
 category: research
@@ -7,7 +7,7 @@ status: shipped
 tags: ["cognitive science", "psycholinguistics", "AI memory", "research grounding"]
 ---
 
-> ↩ The cognitive-science grounding behind the [**Living Cognitive Distillation Engine**](/archive/living-cognitive-distillation-engine-positioning) — part of the [Personal Distillation Pipeline](/archive/distillation-pipeline) project.
+> ↩ The cognitive-science grounding behind [**Metsu**](/archive/metsu), my living cognitive engine. What it pulls out: [**Facet Catalog →**](/archive/lcde-facet-catalog).
 
 
 *The science that defines what the engine extracts, what it infers, and what it refuses. Every design rule below traces to peer-reviewed evidence. Built June 2026.*
@@ -16,7 +16,7 @@ tags: ["cognitive science", "psycholinguistics", "AI memory", "research groundin
 
 ## Bottom line (the reframe that makes this defensible)
 
-The academic literature on "inferring personality/cognition from text" reports a hard ceiling: aggregate predictive validity of **r ≈ 0.3–0.4** against self-report, explaining **under 20% of variance**, dropping further at the individual level, and **generalizing poorly across text domains and populations**. If the engine's job were "predict Manny's Big Five score from his notes," the science says it would mostly fail and any confident output would be pseudoscience.
+The academic literature on "inferring personality/cognition from text" reports a hard ceiling: aggregate predictive validity of **r ≈ 0.3–0.4** against self-report, explaining **under 20% of variance**, dropping further at the individual level, and **generalizing poorly across text domains and populations**. If the engine's job were "predict someone's Big Five score from their notes," the science says it would mostly fail and any confident output would be pseudoscience.
 
 **The engine does not do that.** The defensible move is to split the product into two epistemically distinct layers:
 
