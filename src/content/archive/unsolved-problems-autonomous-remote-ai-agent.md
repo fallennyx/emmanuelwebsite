@@ -1,7 +1,7 @@
 ---
 title: "Unsolved Problems for an Autonomous Remote AI Agent: Consumer Devices & Automotive"
 date: 2026-06-04
-summary: "Exploring where an autonomous AI agent could plug into the consumer-device and automotive world — the control gaps locked behind apps and proprietary billing, and which of them are real, unsolved, and worth building."
+summary: "Where could an autonomous AI agent actually take over your devices and your car? I went looking for the real gaps, the control locked behind apps and proprietary billing that nobody has cracked. Then I sorted them: which are real, which are unsolved, and which are actually worth building."
 category: research
 status: shipped
 tags: ["AI agents", "UI automation", "problem-finding", "consumer"]

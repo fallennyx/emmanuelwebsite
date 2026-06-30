@@ -1,10 +1,9 @@
 ---
 title: "Catalyst Radar: A Quant Backtest of 482 Live Breakout Alerts"
 date: 2026-06-16
-summary: "An adversarial statistical study of 482 EMIT alerts fired by the Catalyst Radar engine — conditional win rates, feature interactions, regime analysis, exit timing, and a $8 Grok x_search experiment that finally answers whether the LLM enrichment layer predicts anything. Spoiler: the only robust edge is a two-variable filter, the biggest lever is an exit rule, and the LLM direction call adds nothing measurable."
+summary: "An adversarial study of 482 live alerts the engine actually fired. I graded all of them: conditional win rates, feature interactions, regime analysis, exit timing, plus an $8 Grok experiment to test whether the LLM layer predicts anything. The honest result: the only robust edge is a two-variable filter, the biggest lever is an exit rule and not an entry, and the LLM's direction call adds nothing measurable."
 category: research
 status: shipped
-draft: true
 tags: ["quant", "backtest", "statistics", "Python", "trading", "LLM eval"]
 ---
 

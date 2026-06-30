@@ -1,10 +1,9 @@
 ---
 title: "Catalyst Radar v1: Architecture Optimization Brief"
 date: 2026-05-20
-summary: "The first optimization pass on the Catalyst Radar architecture: the three structural flaws in the v1 spec — uniform polling, one LLM call per ticker, naive ranking — and the redesign that fixes signal-to-noise and cost."
+summary: "My first hard pass at fixing the Catalyst Radar architecture. The v1 spec had three structural flaws: uniform polling, one LLM call per ticker, and a ranking that leaned on a lagging number. So I redesigned the loop, the prefilter, and the scoring to fix signal-to-noise and keep the cost near zero."
 category: research
 status: archived
-draft: true
 tags: ["architecture", "event detection", "LLM pipeline", "systems design"]
 ---
 

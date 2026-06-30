@@ -1,7 +1,7 @@
 ---
 title: "Venture Assessment: AI for Regulated-Document Compliance"
 date: 2026-06-11
-summary: "A venture assessment of AI for regulated- and government-document compliance, weighing two wedges — franchise disclosure documents (FDD) versus defense — on market, technical, and regulatory fit."
+summary: "Before betting on a wedge, I wanted to know which one was actually better. So I put two against each other. FDD, the legal side, where every franchisor refiles a 23-item disclosure by hand every single year. Versus defense compliance documents, where my clearance gives me an angle. This is that assessment: market, tech, and regulatory risk on both, and why I led with FDD."
 category: research
 status: shipped
 tags: ["venture", "AI", "legaltech", "defense"]

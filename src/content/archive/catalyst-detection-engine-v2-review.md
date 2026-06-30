@@ -4,7 +4,6 @@ date: 2026-05-25
 summary: "An adversarial peer review of my own detection architecture, measured directly against v1: what the first version left on the table, the assumptions the empirical record contradicts, and the v2 spec that fixes them."
 category: research
 status: shipped
-draft: true
 tags: ["trading", "ML", "systems architecture", "crypto"]
 ---
 

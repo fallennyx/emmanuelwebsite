@@ -31,3 +31,6 @@ portable, zero-maintenance cognitive model — is mapped out here:
 
 - **[The Living Cognitive Distillation Engine →](/archive/living-cognitive-distillation-engine-positioning)**
   — positioning & competitive intelligence for turning this into a real product.
+- **[Cognitive-Science Grounding →](/archive/lcde-extraction-grounding)**
+  — the peer-reviewed science the engine is built on: what it can read from your words,
+  what it refuses to, and why that honesty is the edge.

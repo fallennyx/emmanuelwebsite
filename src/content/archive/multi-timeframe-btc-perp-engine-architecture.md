@@ -2,9 +2,8 @@
 title: "Multi-Timeframe Execution Engine: A Complete Architecture"
 date: 2026-03-15
 summary: "Early architecture research, before I built Catalyst Radar. A single perp account can't hold opposing positions at once, so every multi-timeframe system has to solve the net-position problem first. This is the spec where I worked that out: three layers, 15M, 1H, 4H, on BTC-PERP, reconciled into one net position. The thinking that fed the build."
-category: project
+category: research
 status: archived
-draft: true
 tags: ["architecture", "systems design", "concurrency", "execution"]
 ---
 

@@ -8,6 +8,8 @@ tags: ["AI memory", "competitive analysis", "distillation", "MCP", "venture"]
 ---
 
 > ↩ The evolved idea behind my personal [**Voice Distillation**](https://github.com/fallennyx/voicedistillation) build — part of the [Personal Distillation Pipeline](/archive/distillation-pipeline) project.
+>
+> 🔬 The science behind it: [**Cognitive-Science Grounding →**](/archive/lcde-extraction-grounding) — the peer-reviewed evidence the engine is built on.
 
 ## TL;DR
 - **The white space is real but narrowing fast: as of June 2026, every major player ships STATIC or platform-LOCKED memory — nobody ships a truly LIVING, zero-maintenance, cross-LLM-portable cognitive MODEL that auto-re-distills itself as you produce new data and outputs portable system instructions.** OpenAI's Dreaming V3 (June 4, 2026) is the closest and the biggest existential threat, but it is locked to ChatGPT and does fact/preference synthesis, not portable cognitive modeling.

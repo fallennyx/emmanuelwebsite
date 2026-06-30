@@ -1,7 +1,7 @@
 ---
 title: "Reverse Samwer Screen: 16 Foreign-Proven App Opportunities With US Whitespace"
 date: 2026-06-19
-summary: "A structural-arbitrage screen for apps already proven successful in foreign markets that still have no real US implementation — sixteen foreign-proven opportunities with open US whitespace, and what makes each one transplantable."
+summary: "Here's the cheat code: find the apps already winning in other countries that nobody has built for the US yet. That's structural arbitrage, not guessing. I screened for sixteen foreign-proven opportunities sitting on open US whitespace, then broke down what actually makes each one transplantable."
 category: research
 status: shipped
 tags: ["apps", "international", "market research", "product"]
