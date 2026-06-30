@@ -72,6 +72,8 @@ personalized model produces better outputs.
   the headline.
 - **[Cognitive-Science Grounding →](/archive/lcde-extraction-grounding)**. The peer-reviewed
   evidence behind what it extracts, what it infers, and what it refuses to guess.
+- **[How Personalization Works, and How to Prove It →](/archive/lcde-personalization-synthesis)**.
+  What actually makes an AI yours, and the falsifiable test the rest of the field is dodging.
 
 ## The builds it grew from
 
