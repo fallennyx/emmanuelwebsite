@@ -7,7 +7,7 @@ export async function getStaticPaths() {
   // Detail pages only for entries with a written body — projects (repo) and
   // uploaded documents (file) link out instead.
   return entries
-    .filter((e) => !e.data.repo && !e.data.file)
+    .filter((e) => !e.data.repo && !e.data.file && !e.data.draft)
     .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 

@@ -5,6 +5,7 @@ summary: "This is the build spec: every signal the engine could pull from your w
 category: research
 status: shipped
 tags: ["cognitive science", "psycholinguistics", "AI memory", "narrative identity"]
+draft: true
 ---
 
 > ↩ Part of [**Metsu**](/archive/metsu), my living cognitive engine. The science behind these facets: [**Cognitive-Science Grounding →**](/archive/lcde-extraction-grounding).

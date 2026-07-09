@@ -5,6 +5,7 @@ summary: "This is the other half of Metsu: actually making any AI yours, not jus
 category: research
 status: shipped
 tags: ["AI personalization", "LLM evaluation", "cognitive modeling", "research"]
+draft: true
 ---
 
 > ↩ Part of [**Metsu**](/archive/metsu), my living cognitive engine. The cognitive side: [**What It Extracts →**](/archive/lcde-facet-catalog) and [**the science →**](/archive/lcde-extraction-grounding).

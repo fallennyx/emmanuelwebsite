@@ -5,6 +5,7 @@ summary: "I'm building this engine on the side, and to build it right I need to 
 category: research
 status: shipped
 tags: ["cognitive science", "psycholinguistics", "AI memory", "research grounding"]
+draft: true
 ---
 
 > ↩ The cognitive-science grounding behind [**Metsu**](/archive/metsu), my living cognitive engine. What it pulls out: [**Facet Catalog →**](/archive/lcde-facet-catalog).

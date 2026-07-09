@@ -70,15 +70,12 @@ documents into grounded cognitive atoms. Full test suite green.
 groundedness. The open research question I'm working now: how to rigorously prove a
 personalized model produces better outputs.
 
-## The research behind it
+## Follow it
 
-- **[What It Extracts (Facet Catalog) →](/archive/lcde-facet-catalog)**. Every signal Metsu
-  could pull from your words, graded by what real science backs, with narrative identity as
-  the headline.
-- **[Cognitive-Science Grounding →](/archive/lcde-extraction-grounding)**. The peer-reviewed
-  evidence behind what it extracts, what it infers, and what it refuses to guess.
-- **[How Personalization Works, and How to Prove It →](/archive/lcde-personalization-synthesis)**.
-  What actually makes an AI yours, and the falsifiable test the rest of the field is dodging.
+The research behind Metsu (the cognitive-science grounding, the facet catalog, the
+personalization-proof protocol) stays private while the engine is being built. It's the
+moat. **[metsu.ai →](https://metsu.ai)** is where the project itself lives and where it'll
+surface when there's something to show.
 
 ## The builds it grew from
 
