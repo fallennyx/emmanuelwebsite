@@ -47,4 +47,15 @@ const dateStr = entry.data.date.toLocaleDateString('en-US', {
   .cat.research { color: #ec8fb4; }
   .post h1 { font-size: clamp(30px, 6vw, 44px); color: #fff; margin: 0.5rem 0 0.4rem; }
   .date { font-size: 13px; color: var(--faint); margin-bottom: 2.4rem; letter-spacing: 0.5px; }
+  .post :global(.prose > blockquote:first-child) {
+    margin: 0 0 3rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--border-strong);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    background: rgba(20, 17, 38, 0.34);
+    color: var(--text);
+    font-style: normal;
+  }
+  .post :global(.prose > blockquote:first-child p + p) { margin-top: 0.7rem; }
 </style>
