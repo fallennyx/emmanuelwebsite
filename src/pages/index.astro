@@ -13,6 +13,10 @@ const portals = [
     <p class="tag">
       Writer, builder, and collector of artifacts — assembling everything I make, out in the open.
     </p>
+    <p class="current-work">
+      Currently exploring Metsu: first-person VR powers and enhanced perception through AR.
+      <a href="/archive/metsu-xr-pivot/">Why I’m taking Metsu into XR →</a>
+    </p>
     <div class="entries">
       {portals.map((p) => (
         <a class="portal" href={p.href}>
@@ -47,6 +51,8 @@ const portals = [
     color: var(--text);
     font-size: 16px;
   }
+  .current-work { max-width: 540px; margin: 22px auto 0; font-size: 16px; color: var(--text); }
+  .current-work a { display: block; margin-top: 8px; color: var(--accent); }
   .entries {
     display: flex;
     gap: 44px;
