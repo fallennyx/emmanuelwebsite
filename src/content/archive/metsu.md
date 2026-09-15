@@ -3,10 +3,13 @@ title: "Metsu: Personal Intelligence"
 date: 2026-07-30
 summary: "A personal intelligence system that keeps AI aligned with a user's current reality across tools, decisions, and changing work."
 category: writing
-status: building
+status: archived
 tags: ["Metsu", "AI systems", "personal intelligence", "founder memo"]
 draft: false
 ---
+
+> **September 2026 update:** Metsu’s direction has changed. This July memo describes the earlier personal-intelligence product. Read [Why I’m taking Metsu into XR](/archive/metsu-xr-pivot/) for the current direction.
+
 
 > **Private V1 · Founder memo**
 >
