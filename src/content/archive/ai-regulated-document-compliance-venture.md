@@ -9,7 +9,7 @@ tags: ["venture", "AI", "legaltech", "defense"]
 
 # Venture Assessment: AI for Regulated-Document Compliance — FDD vs. Defense Wedges
 
-> **I built the FDD wedge.** See the [**FDD Update Engine** project](/archive/fdd-update-engine) and [**▶ try the live demo**](/demos/fdd/index.html) — a real public Westin FDD updated to a tracked-changes DOCX in the browser, no API key.
+> **I built and later retired the FDD wedge.** The [**FDD Update Engine** project](/archive/fdd-update-engine) remains documented here as a completed experiment; its hosted demo is no longer active.
 
 ## TL;DR
 - **The franchise (FDD) franchisor-side drafting/update wedge is genuinely OPEN** — no AI-native startup is automating the $4,000–$15,000/year attorney-performed annual FDD update; existing AI tools are all franchisee-side "review/risk" analyzers (FranchiseIQ, FranchiseStack) or compliance-tracking dashboards (FranConnect, Spadea's CAP, Internicola's FranIQ). But the total market is small (~$100–250M TAM) and gated by unauthorized-practice-of-law (UPL) risk.
