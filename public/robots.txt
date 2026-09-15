@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akanmutech.com/sitemap-index.xml
+Sitemap: https://emmanuelakanmu.com/sitemap-index.xml

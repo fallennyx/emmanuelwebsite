@@ -169,7 +169,7 @@ A public product demonstration is coming soon. I will update this memo with the 
 
 Product site: [metsu.ai](https://metsu.ai)
 
-Founder and technical work: [akanmutech.com](https://akanmutech.com)
+Founder and technical work: [emmanuelakanmu.com](https://emmanuelakanmu.com)
 
 ## Why I am building it
 

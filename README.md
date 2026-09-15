@@ -1,8 +1,8 @@
-# emmanuelakanmu — akanmutech.com
+# emmanuelakanmu.com
 
 Personal website for Emmanuel Akanmu. Space / multiverse theme with a live WebGL
 "wormhole nebula" background. Built with [Astro](https://astro.build) + Markdown,
-deployed on Netlify.
+deployed as a free static site on Render.
 
 ## Develop
 
@@ -53,7 +53,8 @@ src/
 public/         favicon, archive/files/ (uploaded docs)
 ```
 
-## Deploy (Netlify)
+## Deploy (Render)
 
-Connect the GitHub repo to Netlify. Build settings are in `netlify.toml`
-(`npm run build` → publish `dist`). Point the `akanmutech.com` domain at the site.
+The GitHub repository is connected to the free Render static site. Render runs
+`npm install && npm run build` and publishes `dist`. The canonical domain is
+`emmanuelakanmu.com`.
