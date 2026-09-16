@@ -5,7 +5,7 @@ summary: "Taking Metsu into XR was the easy part. This is the product it became:
 category: project
 status: building
 tags: ["Metsu", "VR", "Quest", "game design", "Unity"]
-draft: true
+draft: false
 ---
 
 On September 7 I wrote [why I was taking Metsu into XR](/archive/metsu-xr-pivot/). This is what it

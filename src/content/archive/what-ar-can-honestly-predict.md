@@ -5,7 +5,7 @@ summary: "The version of this idea I almost shipped claimed too much. This is th
 category: research
 status: building
 tags: ["Metsu", "AR", "computer vision", "perception", "research"]
-draft: true
+draft: false
 ---
 
 The version of this idea I almost shipped claimed too much. This is the version I can

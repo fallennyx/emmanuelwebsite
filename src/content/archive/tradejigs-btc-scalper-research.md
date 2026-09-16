@@ -5,7 +5,7 @@ summary: "I built a deterministic BTC scalper and then spent eight months trying
 category: research
 status: shipped
 tags: ["Python", "quant", "backtesting", "BTC", "negative results"]
-draft: true
+draft: false
 ---
 
 I built a trading engine and then spent eight months trying to prove it wrong.
