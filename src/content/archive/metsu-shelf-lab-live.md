@@ -4,7 +4,6 @@ date: 2026-10-29
 summary: "The Metsu site now runs the real Shelf Lab in the browser. Run 10,000 shoppers, compare layout A against layout B, and watch the result. A 12-page deck and a headset-ready demo sit behind it."
 category: project
 status: shipped
-repo: "https://metsu.ai"
 tags: ["Metsu", "XR", "Shelf Lab", "retail", "simulation"]
 draft: false
 ---
