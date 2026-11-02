@@ -39,4 +39,3 @@ what was built and learned.
 
 - [**The venture assessment behind it →**](/archive/ai-regulated-document-compliance-venture)
   — the market, the incumbents, the unauthorized-practice-of-law risk, and why I led with FDD.
-- [**Code on GitHub →**](https://github.com/fallennyx/fddpipeline)
